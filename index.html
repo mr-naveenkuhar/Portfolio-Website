@@ -1,205 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test -2</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://i.postimg.cc/9fqYVvxh/logo.png" type="image/x-icon">
 </head>
-
 <body>
-    <section id="landing">
-        <nav>
-            <ul>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#history">History</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#home">Home</a></li>
-            </ul>
-        </nav>
-    </section>
+    <main>
+        <aside class="sidebar " data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="https://i.postimg.cc/JzBWVhW4/my-avatar.png" alt="avatar" width="80">
+                </figure>
 
-    <section id="home">
-        <div class="container">
-            <h1>
-                Hi i am Naveen Kuhar <br />I am a
-                <span class="txt-type" data-wait="3000" data-words='["Developer", "Designer", "Creator"]'></span>
-            </h1>
-            <h2>
-                Know More About me <br />
-                <a href="#about"><img src="./Images/icons8-down-96.png" alt="" /></a>
-            </h2>
-        </div>
-    </section>
+                <div class="info-content">
+                    <h1 class="name" title="Naveen Kuhar">Naveen Kuhar</h1>
+                    <p class="title">AI & ML Engineer | Python Dev </p>
+                </div>
 
-    <section id="about">
-        <div id="abme">
-            <h1>Naveen Kuhar</h1>
-            <p>
-                i am <span id="age"></span> years old. <br />
-                I am a Web Developer with 2 years of experience.
-                <br />
-                I have a passion for coding and learning new technologies.
-                <br />
-                I am Currently studying in Sault College
-            </p>
-            <div id="techs">
-                <h2>Skills :</h2>
-                <ul>
-                    <li
-                        title=" HTML (Hypertext Markup Language) is the standard markup language for creating web pages, providing the structure and content of a webpage through a system of tags and attributes.">
-                        HTML
+                <button class="info-more-btn" data-sidebar-btn>
+                    <span>Show Contacts</span>
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+            </div>
+
+            <div class="sidebar-info-more">
+                <div class="separator"></div>
+
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+
+                            <a href="mailto:mr_kuhar@pm.me" class="contact-link">mr_kuhar@pm.me</a>
+                        </div>
                     </li>
-                    <li
-                        title="CSS (Cascading Style Sheets) is a stylesheet language used to control the presentation and layout of HTML documents, enabling design customization and visual enhancements of web pages.">
-                        CSS
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Phone</p>
+
+                            <a href="tel:+14377669327" class="contact-link">+1 (213) 352-2795</a>
+                        </div>
                     </li>
-                    <li
-                        title="JavaScript (JS) is a versatile programming language primarily used for creating dynamic and interactive content on web pages, enabling functionalities like animations, form validation, and DOM manipulation.">
-                        Javascript
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Birthday</p>
+
+                            <time datetime="1982-06-23">AUG 22</time>
+                        </div>
                     </li>
-                    <li
-                        title="Bootstrap is a popular front-end framework for developing responsive and mobile-first websites and web applications, providing pre-designed CSS and JavaScript components for easy and efficient UI development.">
-                        Bootstrap
-                    </li>
-                    <li
-                        title="Tailwind CSS is a utility-first CSS framework that allows developers to quickly build custom designs by composing classes directly in HTML, enabling rapid development and consistent styling across projects through its utility classes.">
-                        Tailwind
-                    </li>
-                    <li
-                        title="Rust is a systems programming language focused on safety, concurrency, and performance, designed to prevent memory errors and ensure thread safety without sacrificing speed, making it suitable for building reliable and efficient software, particularly in areas like systems programming, web development, and game development.">
-                        Rust
-                    </li>
-                    <li
-                        title="WordPress is a popular open-source content management system (CMS) used for creating websites and blogs, offering a user-friendly interface, customizable themes, and a wide range of plugins for adding functionality such as e-commerce, SEO optimization, and social media integration, making it a versatile platform for individuals and businesses to build and manage their online presence.">
-                        Wordpress
-                    </li>
-                    <li
-                        title="jQuery is a fast, small, and feature-rich JavaScript library that simplifies client-side scripting tasks such as DOM manipulation, event handling, and AJAX requests, providing a concise and efficient way to interact with HTML elements and create dynamic web pages with cross-browser compatibility.">
-                        Jquery
-                    </li>
-                    <li
-                        title="jQuery is a fast, small, and feature-rich JavaScript library that simplifies client-side scripting tasks such as DOM manipulation, event handling, and AJAX requests, providing a concise and efficient way to interact with HTML elements and create dynamic web pages with cross-browser compatibility.">
-                        React
-                    </li>
-                    <li
-                        title="Python is a high-level, interpreted programming language known for its simplicity, readability, and versatility. It emphasizes code readability and allows developers to write clear and concise code, making it popular for a wide range of applications, including web development, data analysis, artificial intelligence, scientific computing, and more.">
-                        Python
-                    </li>
-                    <li
-                        title="Python is a high-level, interpreted programming language known for its simplicity, readability, and versatility. It emphasizes code readability and allows developers to write clear and concise code, making it popular for a wide range of applications, including web development, data analysis, artificial intelligence, scientific computing, and more.">
-                        Git
-                    </li>
-                    <li
-                        title="GitHub is a web-based platform for hosting Git repositories and collaborating on software development projects. It offers features such as version control, issue tracking, code review, and project management tools, enabling developers to work together efficiently and contribute to open-source projects worldwide.">
-                        Github
-                    </li>
-                    <li
-                        title="GitLab is a web-based DevOps platform that provides Git repository management, CI/CD pipelines, issue tracking, code review, and project management functionalities. It offers both cloud-hosted and self-hosted solutions, allowing teams to collaborate on software development projects, automate workflows, and streamline the development lifecycle.">
-                        Gitlab
-                    </li>
-                    <li
-                        title="I believe you're referring to Docker, which is an open-source platform used for containerization. Docker allows developers to package their applications and dependencies into standardized units called containers, which can then be easily deployed across different environments. This approach enables consistent and efficient deployment of applications, simplifies dependency management, and enhances scalability and portability of software systems.">
-                        Docker
-                    </li>
-                    <li
-                        title="I believe you're referring to Docker, which is an open-source platform used for containerization. Docker allows developers to package their applications and dependencies into standardized units called containers, which can then be easily deployed across different environments. This approach enables consistent and efficient deployment of applications, simplifies dependency management, and enhances scalability and portability of software systems.">
-                        Azure
-                    </li>
-                    <li
-                        title="AWS, or Amazon Web Services, is a comprehensive cloud computing platform offered by Amazon. It provides a wide range of services including computing power, storage, databases, machine learning, analytics, networking, security, and more, allowing businesses to build and deploy scalable, reliable, and flexible applications and services. AWS offers a global infrastructure with data centers located in multiple regions worldwide, enabling businesses to reach customers globally while benefiting from features such as high availability, security, and cost-effectiveness.">
-                        AWS
-                    </li>
-                    <li
-                        title="DaVinci Resolve is a professional video editing software developed by Blackmagic Design. It offers a comprehensive set of tools for editing, color correction, visual effects, and audio post-production, making it suitable for filmmakers, video editors, and content creators. DaVinci Resolve is known for its advanced color grading capabilities, real-time editing, collaborative workflows, and integration with other post-production tools, making it a popular choice in the film and television industry.">
-                        Davichi Resolve
-                    </li>
-                    <li
-                        title="Adobe Premiere Pro is a professional video editing software developed by Adobe Inc. It offers a wide range of tools for editing, color correction, audio post-production, and visual effects, enabling filmmakers, video editors, and content creators to create high-quality videos and films. Adobe Premiere Pro is known for its intuitive interface, powerful features, and seamless integration with other Adobe Creative Cloud applications, making it a popular choice for video editing professionals worldwide.">
-                        Adobe Premiere Pro
-                    </li>
-                    <li
-                        title="Adobe After Effects is a professional video editing software developed by Adobe Inc. It offers a wide range of tools for editing, color correction, audio post-production, and visual effects, enabling filmmakers, video editors, and content creators to create high-quality videos and films. Adobe After Effects is known for its intuitive interface, powerful features, and seamless integration with other Adobe Creative Cloud applications, making it a popular choice for video editing professionals worldwide.">
-                        Adobe After Effects
-                    </li>
-                    <li
-                        title="Adobe Illustrator is a vector graphics editor developed by Adobe Inc. It is used for creating illustrations, logos, icons, diagrams, and other graphic designs, providing tools for drawing, painting, and typography. Adobe Illustrator is known for its precision, scalability, and versatility, making it a popular choice among graphic designers, illustrators, and artists for creating digital artwork and designs.">
-                        Adobe Illustrator
-                    </li>
-                    <li
-                        title="3ds Max, also known as 3D Studio Max, is a professional 3D computer graphics program developed by Autodesk. It is used for creating 3D models, animations, and digital images. It's widely used in industries like game development, film and TV visual effects, architecture and design visualization. Known for its flexible plugin architecture and the ability to model, simulate, and render high-quality 3D assets, 3ds Max is a popular choice among 3D artists worldwide.">
-                        3ds Max
-                    </li>
-                    <li title="Blender is a professional 3D computer graphics program developed by Autodesk. It is used for creating 3D models, animations, and digital images. It's widely used in industries like game development, film and TV visual effects, architecture and design visualization. Known for its flexible plugin architecture and the ability to model, simulate, and render high-quality 3D assets, 3ds Max is a popular choice among 3D artists worldwide
-            ">
-                        Blender
+
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+
+                            <address>Toronto , CA</address>
+                        </div>
                     </li>
                 </ul>
+
+                <div class="separator"></div>
+
+                <ul class="social-list">
+                    <li class="social-item"><a href="https://www.linkedin.com/in/mrnaveenkuhar/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    <li class="social-item"><a href="https://github.com/mr-naveenkuhar" class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
+                </ul>
             </div>
-        </div>
-        <div id="imageme">
-            <img src="./Images/Me.jpg" alt="" />
-        </div>
-    </section>
-    <section id="history">
-        <!-- The Timeline -->
+        </aside>
 
-        <ul class="timeline">
-            <h2>History</h2>
-            <!-- Item 1 -->
-            <li>
-                <div class="direction-r">
-                    <div class="flag-wrapper">
-                        <span class="flag">High School</span>
-                        <span class="time-wrapper"><span class="time">2019</span></span>
-                    </div>
-                    <div class="desc">
-                        Completed my High School from Saraswati Senior Secondary School
-                    </div>
-                </div>
-            </li>
+        <div class="main-content">
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Blog</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+                </ul>
+            </nav>
 
-            <!-- Item 2 -->
-            <li>
-                <div class="direction-l">
-                    <div class="flag-wrapper">
-                        <span class="flag">Freelancing</span>
-                        <span class="time-wrapper"><span class="time">2019 - 2023</span></span>
-                    </div>
-                    <div class="desc">
-                        During Freelancing All the stuff I've learned and projects I've
-                        been working on.
-                    </div>
-                </div>
-            </li>
+            <article class="about active" data-page="about">
+                <header>
+                    <h2 class="h2 article-title">About me</h2>
+                </header>
 
-            <!-- Item 3 -->
-            <li>
-                <div class="direction-r">
-                    <div class="flag-wrapper">
-                        <span class="flag">Sault College</span>
-                        <span class="time-wrapper"><span class="time">2024 - Now</span></span>
+                <section class="about-text">
+                    <p>Hi, I’m Naveen Kuhar, an <strong> AI & ML | Python developer </strong>with a strong focus on solving real-world problems through technology. I’m passionate about exploring the potential of artificial intelligence and machine learning to create innovative solutions..</p>
+                    <p>My goal is to bring ideas to life through AI and Python, creating solutions that not only function seamlessly but also add value in the most creative and efficient ways. I’ve had the opportunity to work on projects that combine cutting-edge technology with practical applications, and I’m always eager to learn and grow.</p>
+                </section>
+
+                <section class="service">
+                    <h3 class="h3 service-title">What I'm doing</h3>
+
+                    <ul class="service-list">
+                        <li class="service-item" class="blink-card"> 
+                            <pixel-canvas></pixel-canvas>
+                            <div class="service-icon-box">
+                                <img  src="https://img.icons8.com/ios-filled/ffbe5c/artificial-intelligence.png" alt="icon"/>
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">AI & ML </h4>
+                                <p class="service-item-text">Developing high-quality AI systems and machine learning models for efficient, impactful solutions..</p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="https://i.postimg.cc/ZqgqrqzG/icon-dev.png" alt="icon" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Web development</h4>
+                                <p class="service-item-text">High-quality development of sites at the professional level.</p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="https://i.postimg.cc/xjLdzYxZ/icon-app.png" alt="icon" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Mobile apps</h4>
+                                <p class="service-item-text">Professional development of applications for iOS and Android.</p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="https://i.postimg.cc/0NL8zHpx/icon-photo.png" alt="icon" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Photography</h4>
+                                <p class="service-item-text">I make high-quality photos of any category at a professional level.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+
+
+            </article>
+            
+            <article class="resume " data-page="resume">
+                <header>
+                    <h2 class="h2 article-title">Resume</h2>
+                </header>
+
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+
+                        <h3 class="h3">Education</h3>
                     </div>
-                    <div class="desc">
-                        Currently pursuing my Computer Programming Diploma from Sault
-                        College
+
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Sault College</h4>
+                            <span>2024 - 2026</span>
+                            <p class="timeline-text">There I learnt a wide range of topics that are essential to understanding both the theory and practical aspects of computing. This involves programming fundamentals, computer architecture, operating systems, databases, software engineering, problem solving, collaboration and communication soft skills.</p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Delhi university</h4>
+                            <span>2019-2023</span>
+                            <p class="timeline-text">I chose my master degree in technology. There I deepened my knowledge, enhanced my skills in the area and learnt how to increase my career prospects in a competitive job market.</p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">High School of Art and Design</h4>
+                            <span>2003 - 2005</span>
+                            <p class="timeline-text">There I learnt foundational courses and computer sciences fundamentals. In the institution, I chose my specialization in web-development that involves front-end and back-end technologies, user interface designs and content management systems.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+
+                        <h3 class="h3">Experience</h3>
                     </div>
-                </div>
-            </li>
-        </ul>
-    </section>
-    <section id="contact">
-        <div id="cmain">
-            <h2>Contact Me</h2>
-            <a href="mailto:mr.naveenkuhar@gmail.com">mr.naveenkuhar@gmail.com</a>
+
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Creative director</h4>
+                            <span>2015 - Present</span>
+                            <p class="timeline-text">I can develop and oversee creative concepts for projects and campaigns managing a team of designers, writers, and other creative professionals.</p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Art director</h4>
+                            <span>2013 - 2015</span>
+                            <p class="timeline-text">I create and develop visual concepts that align with the project's goals and objectives, supervising the design process and managing timelines and budgets for design projects.</p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Web designer</h4>
+                            <span>2010 - 2013</span>
+                            <p class="timeline-text">I create logos, color schemes and typography for a brand's identity. Also I develop graphics for websites, social media and digital ads with applications that enhance user experience.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="skill">
+                    <h3 class="h3 skills-title">My Skills</h3>
+
+                    <ul class="skills-list content-card">
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Web Design</h5>
+                                <data value="80">80%</data>
+                            </div>
+
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 80%;"></div>
+                            </div>
+                        </li>
+
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Graphic Design</h5>
+                                <data value="70">70%</data>
+                            </div>
+
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 70%;"></div>
+                            </div>
+                        </li>
+
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Branding</h5>
+                                <data value="90">90%</data>
+                            </div>
+
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 90%;"></div>
+                            </div>
+                        </li>
+
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">WordPress</h5>
+                                <data value="50">50%</data>
+                            </div>
+
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 50%;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+
+            <article class="portfolio " data-page="portfolio">
+                <header>
+                    <h2 class="h2 article-title">Portfolio</h2>
+                </header>
+
+                <section class="projects">
+                    <ul class="filter-list">
+                        <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+                        <li class="filter-item"><button data-filter-btn>Web Design</button></li>
+                        <li class="filter-item"><button data-filter-btn>Applications</button></li>
+                        <li class="filter-item"><button data-filter-btn>Web Development</button></li>
+                    </ul>
+
+                    <div class="filter-select-box">
+                        <button class="filter-select " data-select>
+                            <div class="select-value" data-select-value>Select Category</div>
+
+                            <div class="select-icon">
+                                <ion-icon name="chevron-down"></ion-icon>
+                            </div>
+                        </button>
+
+                        <ul class="select-list">
+                            <li class="select-item"><button data-select-item>All</button></li>
+                            <li class="select-item"><button data-select-item>Web Design</button></li>
+                            <li class="select-item"><button data-select-item>Applications</button></li>
+                            <li class="select-item"><button data-select-item>Web Development</button></li>
+                        </ul>
+                    </div>
+
+                    <ul class="project-list">
+                        <li class="project-item active" data-filter-item data-category="web development">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/qRHpHMyd/project-1.jpg" alt="finance" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Finance</h3>
+                                <p class="project-category">Web Development</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="web development">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/bNrcM2Wt/project-2.png" alt="orizon" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Orizon</h3>
+                                <p class="project-category">Web Development</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="web design">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/jSJVqYsq/project-3.jpg" alt="fundo" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Fundo</h3>
+                                <p class="project-category">Web Design</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="applications">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/dtpXxNGb/project-4.png" alt="brawlhalla" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Brawlhalla</h3>
+                                <p class="project-category">Applications</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="web design">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/43T0JKLw/project-5.png" alt="dsm." loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">DSM.</h3>
+                                <p class="project-category">Web Design</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="web design">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/qR1DX1kZ/project-6.png" alt="metaspark" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Metaspark</h3>
+                                <p class="project-category">Web Design</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="web development">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/Kj4q9tjc/project-7.png" alt="summary" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Summary</h3>
+                                <p class="project-category">Web Development</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="applications">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/rw2j4B1w/project-8.jpg" alt="task manager" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Task Manager</h3>
+                                <p class="project-category">Applications</p>
+                            </a>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="web development">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="https://i.postimg.cc/7LxNsSQv/project-9.png" alt="arrival" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Arrival</h3>
+                                <p class="project-category">Web Development</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+
+            <article class="blog " data-page="blog">
+                <header>
+                    <h2 class="h2 article-title">Blog</h2>
+                </header>
+
+                <section class="blog-posts">
+                    <ul class="blog-posts-list">
+                        <li class="blog-post-item">
+                            <a href="#">
+                                    <figure class="blog-banner-box">
+                                        <img src="https://i.postimg.cc/DysCZrWs/blog-1.jpg" alt="Design conferences in 2024" loading="lazy">
+                                    </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Design</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2024-02-23">Feb 23, 2024</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Design conferences in 2024</h3>
+                                    <p class="blog-text">In 2024, several exciting design conferences are set to take place, offering opportunities for professionals and enthusiasts to connect, learn, and share innovative ideas.</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="#">
+                                <figure class="blog-banner-box">
+                                    <img src="https://i.postimg.cc/QC7qFDMs/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                                </figure>
+
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Design</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2024-01-29">Jan 29, 2024</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+                                    <p class="blog-text">When it comes to typography, choosing the right font is essential for effective design. In this article, I'll bring a brief overview of some of the best fonts that every designer should consider incorporating into their toolkit.</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="#">
+                                <figure class="blog-banner-box">
+                                    <img src="https://i.postimg.cc/W1T71QcL/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Design</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-12-20">Dec 20, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Design digest #80</h3>
+                                    <p class="blog-text">Hello, my friends. In this Design Digest, I'll show you a curated collection of the latest trends, insights, and innovations in the design world. This edition highlights key themes and discussions that are shaping the future of design.</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="#">
+                                <figure class="blog-banner-box">
+                                    <img src="https://i.postimg.cc/2S0n8yxh/blog-4.jpg" alt="2023 UI interactions" loading="lazy">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Design</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-11-29">Nov 29, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">2023 UI interactions</h3>
+                                    <p class="blog-text">As we move into 2024, 2023 was marked by the rapidly evolution of the landscape of UI interactions, driven by advancements in technology and user expectations. Dive with me in this text to see the main areas changed in this year.</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="#">
+                                <figure class="blog-banner-box">
+                                    <img src="https://i.postimg.cc/YCCmVkw9/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Design</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-11-12">Nov 12, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+                                    <p class="blog-text">In the realm of design, spacing is often an overlooked yet crucial element that can significantly impact the overall aesthetic and functionality of a composition. This post will emphasize the importance of white space, margins, and padding in creating visually appealing and effective designs.</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="#">
+                                <figure class="blog-banner-box">
+                                    <img src="https://i.postimg.cc/zBCBvP16/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                                </figure>
+
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Design</p>
+                                        <span class="dot"></span>
+                                        <time datetime="2023-10-20">Oct 20, 2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Design digest #79</h3>
+                                    <p class="blog-text">Hi, my friends. In this Design Digest I'll focus in the tools and resources that we use daily in our projects. Also, I'll include examples of software recommendations, online courses, and design communities that foster collaboration and learning.</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+
+            <article class="contact " data-page="contact">
+                <header>
+                    <h2 class="h2 article-title">Contact</h2>
+                </header>
+
+                <section class="mapbox" data-mapbox>
+                    <figure>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+                         width="400" height="300" loading="lazy"></iframe>
+                    </figure>
+                </section>
+
+                <section class="contact-form">
+                    <h3 class="h3 form-title">Contact Form</h3>
+
+                    <form action="#" class="form" data-form>
+                        <div class="input-wrapper">
+                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                            <input type="email" name="email" class="form-input" placeholder="Email Address" required data-form-input>
+                        </div>
+
+                        <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input=""></textarea>
+
+                        <button class="form-btn" type="submit" disabled data-form-btn>
+                            <ion-icon name="paper-plane"></ion-icon>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </section>
+            </article>
         </div>
-        <div id="social">
-            <a href="https://www.linkedin.com/in/mrnaveenkuhar/">linkedin</a>
-            <a href="https://github.com/naveenkuhar">Github</a>
-        </div>
-    </section>
+    </main>
+
+    <script src="app.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-<script src="app.js"></script>
-
 </html>

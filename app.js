@@ -1,81 +1,132 @@
-class TypeWriter {
-    constructor(txtElement, words, wait = 3000) {
-      this.txtElement = txtElement;
-      this.words = words;
-      this.txt = '';
-      this.wordIndex = 0;
-      this.wait = parseInt(wait, 10);
-      this.type();
-      this.isDeleting = false;
+'use strict';
+
+//Opening or closing side bar
+
+const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+
+const sidebar = document.querySelector("[data-sidebar]");
+const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+
+sidebarBtn.addEventListener("click", function() {elementToggleFunc(sidebar); })
+
+// //Activating Modal-testimonial
+
+// const testimonialsItem = document.querySelectorAll('[data-testimonials-item]');
+// const modalContainer = document.querySelector('[data-modal-container]');
+// const modalCloseBtn = document.querySelector('[data-modal-close-btn]');
+// const overlay = document.querySelector('[data-overlay]');
+
+// const modalImg = document.querySelector('[data-modal-img]');
+// const modalTitle = document.querySelector('[data-modal-title]');
+// const modalText = document.querySelector('[data-modal-text]');
+
+// const testimonialsModalFunc = function () {
+//     modalContainer.classList.toggle('active');
+//     overlay.classList.toggle('active');
+// }
+
+// for (let i = 0; i < testimonialsItem.length; i++) {
+//     testimonialsItem[i].addEventListener('click', function () {
+//         modalImg.src = this.querySelector('[data-testimonials-avatar]').src;
+//         modalImg.alt = this.querySelector('[data-testimonials-avatar]').alt;
+//         modalTitle.innerHTML = this.querySelector('[data-testimonials-title]').innerHTML;
+//         modalText.innerHTML = this.querySelector('[data-testimonials-text]').innerHTML;
+
+//         testimonialsModalFunc();
+//     })
+// }
+
+// //Activating close button in modal-testimonial
+
+// modalCloseBtn.addEventListener('click', testimonialsModalFunc);
+// overlay.addEventListener('click', testimonialsModalFunc);
+
+//Activating Filter Select and filtering options
+
+const select = document.querySelector('[data-select]');
+const selectItems = document.querySelectorAll('[data-select-item]');
+const selectValue = document.querySelector('[data-select-value]');
+const filterBtn = document.querySelectorAll('[data-filter-btn]');
+
+select.addEventListener('click', function () {elementToggleFunc(this); });
+
+for(let i = 0; i < selectItems.length; i++) {
+    selectItems[i].addEventListener('click', function() {
+
+        let selectedValue = this.innerText.toLowerCase();
+        selectValue.innerText = this.innerText;
+        elementToggleFunc(select);
+        filterFunc(selectedValue);
+
+    });
+}
+
+const filterItems = document.querySelectorAll('[data-filter-item]');
+
+const filterFunc = function (selectedValue) {
+    for(let i = 0; i < filterItems.length; i++) {
+        if(selectedValue == "all") {
+            filterItems[i].classList.add('active');
+        } else if (selectedValue == filterItems[i].dataset.category) {
+            filterItems[i].classList.add('active');
+        } else {
+            filterItems[i].classList.remove('active');
+        }
     }
-  
-    type() {
-      // Current index of word
-      const current = this.wordIndex % this.words.length;
-      // Get full text of current word
-      const fullTxt = this.words[current];
-  
-      // Check if deleting
-      if(this.isDeleting) {
-        // Remove char
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-      } else {
-        // Add char
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-      }
-  
-      // Insert txt into element
-      this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-  
-      // Initial Type Speed
-      let typeSpeed = 200;
-  
-      if(this.isDeleting) {
-        typeSpeed /= 2;
-      }
-  
-      // If word is complete
-      if(!this.isDeleting && this.txt === fullTxt) {
-        // Make pause at end
-        typeSpeed = this.wait;
-        // Set delete to true
-        this.isDeleting = true;
-      } else if(this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        // Move to next word
-        this.wordIndex++;
-        // Pause before start typing
-        typeSpeed = 500;
-      }
-  
-      setTimeout(() => this.type(), typeSpeed);
-    }
-  }
-  
-  
-  // Init On DOM Load
-  document.addEventListener('DOMContentLoaded', init);
-  
-  // Init App
-  function init() {
-    const txtElement = document.querySelector('.txt-type');
-    const words = JSON.parse(txtElement.getAttribute('data-words'));
-    const wait = txtElement.getAttribute('data-wait');
-    // Init TypeWriter
-    new TypeWriter(txtElement, words, wait);
-  }
+}
 
+//Enabling filter button for larger screens 
 
+let lastClickedBtn = filterBtn[0];
 
-// FOr age 
-let day = new Date
-    let age = 2000;
-    let currentYear = day.getFullYear();
-    age = Number.parseInt(age);
-    console.log(currentYear);
-    document.getElementById("age").innerHTML = (currentYear - age);
+for (let i = 0; i < filterBtn.length; i++) {
+    
+    filterBtn[i].addEventListener('click', function() {
 
+        let selectedValue = this.innerText.toLowerCase();
+        selectValue.innerText = this.innerText;
+        filterFunc(selectedValue);
 
+        lastClickedBtn.classList.remove('active');
+        this.classList.add('active');
+        lastClickedBtn = this;
 
+    })
+}
 
-// random no 
+// Enabling Contact Form
+
+const form = document.querySelector('[data-form]');
+const formInputs = document.querySelectorAll('[data-form-input]');
+const formBtn = document.querySelector('[data-form-btn]');
+
+for(let i = 0; i < formInputs.length; i++) {
+    formInputs[i].addEventListener('input', function () {
+        if(form.checkValidity()) {
+            formBtn.removeAttribute('disabled');
+        } else { 
+            formBtn.setAttribute('disabled', '');
+        }
+    })
+}
+
+// Enabling Page Navigation 
+
+const navigationLinks = document.querySelectorAll('[data-nav-link]');
+const pages = document.querySelectorAll('[data-page]');
+
+for(let i = 0; i < navigationLinks.length; i++) {
+    navigationLinks[i].addEventListener('click', function() {
+        
+        for(let i = 0; i < pages.length; i++) {
+            if(this.innerHTML.toLowerCase() == pages[i].dataset.page) {
+                pages[i].classList.add('active');
+                navigationLinks[i].classList.add('active');
+                window.scrollTo(0, 0);
+            } else {
+                pages[i].classList.remove('active');
+                navigationLinks[i]. classList.remove('active');
+            }
+        }
+    });
+}
