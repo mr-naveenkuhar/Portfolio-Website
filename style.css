@@ -46,6 +46,7 @@
     --transition1: .25s ease;
     --transition2: .5s ease-in-out;
 
+    --transfrom1 : scale(1.1);
 
 
 
@@ -523,9 +524,9 @@ article { display: none; }
 
 /*SKILLS*/
 
-.skills-title { margin-bottom: 20px; }
+.skills-title{ margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
+.skills-list { padding: 20px; margin: 10px 10px 30px 10px; }
 
 .skills-item:not(:last-child) {margin-bottom: 15px; }
 
@@ -1036,6 +1037,7 @@ textarea.form-input {
     }
 
         .form-btn ion-icon { font-size: 18px; }
+        .timeline-text{padding-right: 15px;}
 }
 
 @media (min-width: 768px) {
